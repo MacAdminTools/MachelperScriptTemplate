@@ -1,0 +1,22 @@
+{
+    "templates": [
+        {"id": "ertetertetert",
+            "name": "App exists",
+            "templateType": "condition",
+            "script": "codesign -v \"{{path}}\"",
+            "args": ["path"],
+            "language": "bash",
+            "keywords": ["app"],
+            "comments": "test if app exists"
+          },
+          {"id": "ertetertetert1221",
+            "name": "Process exists",
+            "templateType": "condition",
+            "script": "if [ $(pgrep {{process}} | wc -l) -gt 0 ]; then exit 1; else exit 0",
+            "args": ["process"],
+            "language": "bash",
+            "keywords": ["app"],
+            "comments": "test if app exists"
+          }
+    ]
+}
