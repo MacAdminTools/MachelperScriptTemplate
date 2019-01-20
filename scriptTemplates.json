@@ -17,6 +17,15 @@
             "language": "bash",
             "keywords": ["app"],
             "comments": "test if app exists"
+          },
+          {"id": "ertetertetert12211212",
+            "name": "Current user is not _mbusersetup",
+            "templateType": "condition",
+            "script": "if [ $(/bin/ls -l /dev/console | /usr/bin/awk '{ print $3 }') != \"_mbusersetup\" ]; then exit 1; else exit 0",
+            "args": [],
+            "language": "bash",
+            "keywords": ["app", "user"],
+            "comments": "test if the OS is still in the setup steps. Detect when setup ends. Can be combined with test of process Finder exists"
           }
     ]
 }
