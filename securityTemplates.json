@@ -1,0 +1,13 @@
+{
+    "templates": [
+        {"id": "afdsgdfdfghdfgh",
+            "name": "Find keychain by account name",
+            "templateType": "condition",
+            "script": "if [ $(security find-generic-password -a \"{{accountName}}\" | wc -l) -gt 0 ]; then; exit 0; else; exit 1; fi",
+            "args": ["accountName"],
+            "language": "bash",
+            "keywords": ["app"],
+            "comments": "test if element exist in keychain"
+        }
+    ]
+}
